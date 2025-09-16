@@ -24,16 +24,16 @@ public class BulletProofEnchantment extends Enchantment {
     }
 
     public int getMaxLevel() {
-        return 4;
+        return 5;
     }
 
     public int getDamageProtection(int pLevel, DamageSource pSource) {
         if (pSource.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
             return 0;
         } else if (this.type == BulletProofEnchantment.Type.BULLET) {
-            return pLevel;
+            return 2*pLevel;
         } else if (this.type == BulletProofEnchantment.Type.BULLET_IGNORE_ARMOR) {
-            return pLevel;
+            return 2*pLevel;
         } else {
             return 0;
         }
