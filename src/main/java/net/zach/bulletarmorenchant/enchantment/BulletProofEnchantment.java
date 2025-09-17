@@ -31,9 +31,9 @@ public class BulletProofEnchantment extends Enchantment {
         if (pSource.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
             return 0;
         } else if (this.type == BulletProofEnchantment.Type.BULLET) {
-            return 2*pLevel;
+            return 3*pLevel;
         } else if (this.type == BulletProofEnchantment.Type.BULLET_IGNORE_ARMOR) {
-            return 2*pLevel;
+            return 3*pLevel;
         } else {
             return 0;
         }
